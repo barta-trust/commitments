@@ -40,3 +40,6 @@ jobs:
           else
             echo "No snapshot changes detected."
           fi
+
+      - name: Trigger trust-center rebuild
+        run: curl -X POST "${{ secrets.CF_DEPLOY_HOOK_TRUST_CENTER }}"
