@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "timestamp": "2026-03-04T19:07:02Z",
+  "commit_sha": "6b907e212e952213e746a602f4201ec698cd15d8",
+  "catalogs": {
+    "fees": "61a5defa1b14290c1d1ca21c06b63bf2475e7c1b675651834fb9cb7388ffbdd9"
+  },
+  "signature": "DiyyESoMBuVzyA8ipAezvPOB5mUlDJWDURPWCucu9ICZlkKbvREq/1jebt1YqTrazP+JGNJMKBGHd/ZctMMwDw=="
+}
