@@ -1,0 +1,12 @@
+# Fee schedule v1 — three-component split.
+# Rates are percentage-based (basis points). Fees are flat (cents).
+# Any change here triggers a new attestation digest.
+
+# Seller: 3.1% deducted from seller payout for processing fees.
+seller_processing_rate_bps: 310
+
+# Buyer: 4.0% added to buyer total (marketplace rate)
+buyer_marketplace_rate_bps: 400
+
+# Buyer: $0.48 flat per transaction (infrastructure fee)
+infrastructure_fee_cents: 48
