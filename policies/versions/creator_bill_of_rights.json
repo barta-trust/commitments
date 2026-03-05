@@ -1,0 +1,13 @@
+{
+  "document": "creator-bill-of-rights",
+  "current_version": "1.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "published": "2026-03-04",
+      "effective": "2026-03-04",
+      "file": "policies/creator_bill_of_rights.md",
+      "sha256": "86cdd1b508b84ddbfd0b56255245f885cbe3c4aef85245fff455e0d4aae06b0f"
+    }
+  ]
+}

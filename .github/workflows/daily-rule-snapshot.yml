@@ -1,0 +1,42 @@
+name: Daily Rule Snapshot
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pynacl pyyaml
+
+      - name: Generate daily snapshot
+        run: python scripts/generate_daily_snapshot.py
+
+      - name: Commit and push snapshot
+        run: |
+          if [ -n "$(git status --porcelain ledger/roots catalogs)" ]; then
+            DATE_UTC="$(date -u +%F)"
+            git config user.name "barta-trust-bot"
+            git config user.email "barta-trust-bot@users.noreply.github.com"
+            git add ledger/roots/*.json catalogs/
+            git commit -m "Daily rule snapshot: ${DATE_UTC}"
+            git push
+          else
+            echo "No snapshot changes detected."
+          fi

@@ -1,0 +1,13 @@
+{
+  "document": "terms-of-service",
+  "current_version": "1.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "published": "2026-03-04",
+      "effective": "2026-03-01",
+      "file": "policies/terms_of_service.md",
+      "sha256": "d47b8024f09e70ab60c32666e1db60224d0bbf774efe781c71b274785662c8d1"
+    }
+  ]
+}
