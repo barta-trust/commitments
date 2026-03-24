@@ -1,0 +1,14 @@
+{
+  "date": "2026-03-24",
+  "fee_path": "catalogs/fees.yaml",
+  "fee_hash": "61a5defa1b14290c1d1ca21c06b63bf2475e7c1b675651834fb9cb7388ffbdd9",
+  "policy_path": "policies/privacy_policy.md",
+  "policy_hash": "decf55f16cce1bcd4b7e597829c0b30f4ec3d398e44bb40198b0653678780640",
+  "bor_path": "policies/creator_bill_of_rights.md",
+  "bor_hash": "86cdd1b508b84ddbfd0b56255245f885cbe3c4aef85245fff455e0d4aae06b0f",
+  "tos_path": "policies/terms_of_service.md",
+  "tos_hash": "d47b8024f09e70ab60c32666e1db60224d0bbf774efe781c71b274785662c8d1",
+  "prev_root_hash": "0ac5199432a38fb4b1c1f762479588567f42c471fbb8a5635ffd51233b6c9bd7",
+  "attestation_hash": "bcec813fb70c222f1443b4bba83a2c977b44e8d7fa5b5db56cd7fdd7dea32bdb",
+  "attestation_commit": "f3fa29f539fb63cc6c5c2d157a4e63e16d40bdee"
+}
