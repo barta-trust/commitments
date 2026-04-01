@@ -7,7 +7,7 @@ title: "Privacy Policy"
 # Privacy Policy
 
 **Effective Date:** March 01, 2026  
-**Last Updated:** March 01, 2026
+**Last Updated:** April 01, 2026
 
 Barta, LLC (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
@@ -54,6 +54,9 @@ When you connect a Stripe account for selling, Stripe collects your bank account
 
 **Communications:**  
 Messages you send to other users through our messaging system, and any communications you send to our support team.
+
+**Phone Number:**  
+When you register or log in using phone-based authentication, we collect your mobile phone number. We use it to send you one-time verification codes (OTP) via SMS. Your phone number is shared with our SMS delivery provider (Vonage) solely for the purpose of delivering these verification messages.
 
 **Imported Data:**  
 If you use our CSV import feature (e.g., importing listings from Etsy), we process the file contents to create listings on your behalf.
@@ -150,6 +153,7 @@ We may share your information for any other purpose with your explicit consent.
 | Stripe | Payment processing and seller payouts | Name, email, bank details, identity documents, transaction data | https://stripe.com/privacy |
 | Cloudflare | Content delivery and security | IP address, browser metadata, request data | https://cloudflare.com/privacypolicy |
 | Postmark | Transactional and marketing email delivery | Email address, name, email content | https://postmarkapp.com/privacy-policy |
+| Vonage | SMS delivery for phone verification | Phone number, SMS message content | https://www.vonage.com/legal/privacy-policy/ |
 
 These providers process data according to their own privacy policies and our data processing agreements.
 

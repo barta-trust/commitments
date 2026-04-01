@@ -7,7 +7,7 @@ title: "Terms of Service"
 # Terms of Service
 
 **Effective Date:** March 01, 2026
-**Last Updated:** March 01, 2026
+**Last Updated:** April 01, 2026
 
 Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta, LLC (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
 
@@ -27,15 +27,16 @@ By creating an account or using the Service, you agree to be bound by these Term
 8. [User Content](#8-user-content)
 9. [Intellectual Property](#9-intellectual-property)
 10. [Messaging](#10-messaging)
-11. [Disputes Between Users](#11-disputes-between-users)
-12. [Termination and Suspension](#12-termination-and-suspension)
-13. [Disclaimers](#13-disclaimers)
-14. [Limitation of Liability](#14-limitation-of-liability)
-15. [Indemnification](#15-indemnification)
-16. [Governing Law and Dispute Resolution](#16-governing-law-and-dispute-resolution)
-17. [Modifications to These Terms](#17-modifications-to-these-terms)
-18. [General Provisions](#18-general-provisions)
-19. [Contact Us](#19-contact-us)
+11. [SMS/Text Messaging Terms](#11-smstext-messaging-terms)
+12. [Disputes Between Users](#12-disputes-between-users)
+13. [Termination and Suspension](#13-termination-and-suspension)
+14. [Disclaimers](#14-disclaimers)
+15. [Limitation of Liability](#15-limitation-of-liability)
+16. [Indemnification](#16-indemnification)
+17. [Governing Law and Dispute Resolution](#17-governing-law-and-dispute-resolution)
+18. [Modifications to These Terms](#18-modifications-to-these-terms)
+19. [General Provisions](#19-general-provisions)
+20. [Contact Us](#20-contact-us)
 
 ---
 
@@ -264,15 +265,29 @@ Barta reserves the right to monitor, review, and store messages for the purposes
 
 ---
 
-# 11. Disputes Between Users
+# 11. SMS/Text Messaging Terms
 
-## 11.1 Direct Resolution
+By providing your phone number and requesting a verification code, you consent to receive SMS text messages from Barta for account authentication purposes.
+
+- **Message frequency:** One message per request.
+- **Message and data rates may apply.** Your mobile carrier's standard messaging rates apply.
+- **Opt-out:** Text **STOP** to opt out of receiving SMS messages from Barta.
+- **Help:** Text **HELP** for help or contact privacy@barta.shop.
+- **Carriers are not liable for delayed or undelivered messages.**
+
+SMS messages are delivered through our third-party provider, Vonage. By consenting to receive SMS messages, you acknowledge that your phone number will be shared with Vonage solely for the purpose of delivering verification codes. See our [Privacy Policy](https://trust.barta.shop/privacy/) for details on how we handle your phone number.
+
+---
+
+# 12. Disputes Between Users
+
+## 12.1 Direct Resolution
 
 If a dispute arises between a buyer and a seller, the parties should first attempt to resolve the issue directly through the platform's communication tools or by contacting the other party via their shop contact information.
 
 If the issue is not resolved within 3 days, either party may escalate the dispute to Barta by emailing **support@barta.shop** with the order details and a description of the issue.
 
-## 11.2 Barta Mediation
+## 12.2 Barta Mediation
 
 If direct resolution is unsuccessful, either party may request that Barta mediate the dispute. Barta may, at its sole discretion:
 
@@ -282,19 +297,19 @@ If direct resolution is unsuccessful, either party may request that Barta mediat
 - Direct a seller to issue a full or partial refund.
 - Take enforcement action against either party if a violation of these Terms is found.
 
-## 11.3 Limitations
+## 12.3 Limitations
 
 Barta's mediation is provided as a courtesy and convenience. We are not required to mediate any dispute and are not responsible for the outcome of any transaction. Our mediation decisions are made in good faith but are not legally binding as arbitration awards. Either party retains the right to pursue legal remedies independently.
 
 ---
 
-# 12. Termination and Suspension
+# 13. Termination and Suspension
 
-## 12.1 Termination by You
+## 13.1 Termination by You
 
 You may close your account at any time by contacting us at support@barta.shop. Upon closure, your profile and listings will be removed from the Service. You remain responsible for any outstanding transactions or obligations incurred before account closure.
 
-## 12.2 Termination or Suspension by Barta
+## 13.2 Termination or Suspension by Barta
 
 We may suspend or terminate your account, remove your content, or restrict your access to the Service at any time, with or without notice, if we reasonably believe that:
 
@@ -303,13 +318,13 @@ We may suspend or terminate your account, remove your content, or restrict your 
 - Your account has been involved in fraudulent, deceptive, or illegal activity.
 - You have not used your account for an extended period (12 months or more).
 
-## 12.3 Effect of Termination
+## 13.3 Effect of Termination
 
 Upon termination, your right to use the Service ceases immediately. Sections that by their nature should survive termination will survive, including but not limited to: Intellectual Property, Disclaimers, Limitation of Liability, Indemnification, and Governing Law.
 
 ---
 
-# 13. Disclaimers
+# 14. Disclaimers
 
 **THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.** To the fullest extent permitted by applicable law, Barta disclaims all warranties, including but not limited to:
 
@@ -322,7 +337,7 @@ Barta does not endorse, warrant, or guarantee any item, seller, or transaction o
 
 ---
 
-# 14. Limitation of Liability
+# 15. Limitation of Liability
 
 **TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL BARTA, ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR:**
 
@@ -338,7 +353,7 @@ Some jurisdictions do not allow the exclusion or limitation of certain warrantie
 
 ---
 
-# 15. Indemnification
+# 16. Indemnification
 
 You agree to indemnify, defend, and hold harmless Barta, LLC and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with:
 
@@ -350,27 +365,27 @@ You agree to indemnify, defend, and hold harmless Barta, LLC and its officers, d
 
 ---
 
-# 16. Governing Law and Dispute Resolution
+# 17. Governing Law and Dispute Resolution
 
-## 16.1 Governing Law
+## 17.1 Governing Law
 
 These Terms and any disputes arising from or relating to them or the Service shall be governed by and construed in accordance with the laws of the **State of North Carolina**, United States, without regard to its conflict of laws principles.
 
-## 16.2 Jurisdiction
+## 17.2 Jurisdiction
 
 You agree that any legal action or proceeding arising out of or relating to these Terms or the Service shall be brought exclusively in the state or federal courts located in **Mecklenburg County, North Carolina**, and you consent to the personal jurisdiction of such courts.
 
-## 16.3 Class Action Waiver
+## 17.3 Class Action Waiver
 
 **YOU AND BARTA AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION.** Unless both you and Barta agree otherwise in writing, no court may consolidate or join more than one person's claims and may not otherwise preside over any form of a representative or class proceeding.
 
-## 16.4 Time Limitation
+## 17.4 Time Limitation
 
 Any claim or cause of action arising out of or related to these Terms or the Service must be filed within **one (1) year** after the claim arose, or be permanently barred.
 
 ---
 
-# 17. Modifications to These Terms
+# 18. Modifications to These Terms
 
 We may revise these Terms from time to time. When we make material changes, we will:
 
@@ -381,35 +396,35 @@ Your continued use of the Service after the effective date of revised Terms cons
 
 ---
 
-# 18. General Provisions
+# 19. General Provisions
 
-## 18.1 Entire Agreement
+## 19.1 Entire Agreement
 
 These Terms, together with our [Privacy Policy](/privacy.html) and any additional agreements you enter into with Barta (including seller-specific agreements), constitute the entire agreement between you and Barta regarding the Service.
 
-## 18.2 Severability
+## 19.2 Severability
 
 If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be enforced to the maximum extent permissible, and the remaining provisions shall remain in full force and effect.
 
-## 18.3 Waiver
+## 19.3 Waiver
 
 Our failure to enforce any right or provision of these Terms does not constitute a waiver of that right or provision. A waiver of any term shall only be effective if in writing and signed by Barta.
 
-## 18.4 Assignment
+## 19.4 Assignment
 
 You may not assign or transfer your rights or obligations under these Terms without our prior written consent. Barta may assign its rights and obligations under these Terms without restriction.
 
-## 18.5 Force Majeure
+## 19.5 Force Majeure
 
 Barta shall not be liable for any delay or failure to perform resulting from causes outside its reasonable control, including but not limited to acts of God, natural disasters, pandemic, war, terrorism, labor disputes, government actions, power failures, internet disruptions, or third-party service provider outages.
 
-## 18.6 Relationship of the Parties
+## 19.6 Relationship of the Parties
 
 Nothing in these Terms creates a partnership, joint venture, agency, franchise, or employment relationship between you and Barta. Sellers are independent third parties, not employees or agents of Barta.
 
 ---
 
-# 19. Contact Us
+# 20. Contact Us
 
 If you have questions about these Terms of Service, please contact us:
 
