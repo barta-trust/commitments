@@ -1,15 +1,15 @@
 ---
-version: "1.1"
-effective: "2026-09-03"
+version: "1.0"
+effective: "2026-03-01"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** September 03, 2026  
+**Effective Date:** March 01, 2026  
 **Last Updated:** April 01, 2026
 
-Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
+Barta, LLC (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
 By accessing or using the Service, you agree to the collection and use of information in accordance with this Privacy Policy. If you do not agree, please do not use the Service.
 
@@ -306,7 +306,7 @@ Continued use of the Service indicates acceptance of the updated policy.
 
 # 16. Contact Us
 
-Barta Inc.  
+Barta, LLC  
 Attn: Privacy  
 1300 South Blvd STE 30071  
 Charlotte, NC 28203  

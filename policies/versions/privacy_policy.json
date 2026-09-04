@@ -1,13 +1,20 @@
 {
   "document": "privacy-policy",
-  "current_version": "1.0",
+  "current_version": "1.1",
   "versions": [
+    {
+      "version": "1.1",
+      "published": "2026-09-04",
+      "effective": "2026-09-03",
+      "file": "policies/privacy_policy.md",
+      "sha256": "1442582740748172535ca0626a493a599c3991c9ab555c80d6f90b3b4bcdd595"
+    },
     {
       "version": "1.0",
       "published": "2026-03-04",
       "effective": "2026-03-01",
-      "file": "policies/privacy_policy.md",
-      "sha256": "ed8fbbc72b91de1f858533ad54d627ab95e8642882efe5f469570b9146882288"
+      "file": "policies/versions/archive/privacy_policy_v1.0.md",
+      "sha256": "3b8d766e22a4c8d267050c7e899f26966dd2a844bc8225e816e429971f5170b7"
     }
   ]
 }

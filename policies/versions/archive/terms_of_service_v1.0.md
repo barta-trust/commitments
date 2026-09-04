@@ -1,15 +1,15 @@
 ---
-version: "1.1"
-effective: "2026-09-03"
+version: "1.0"
+effective: "2026-03-01"
 title: "Terms of Service"
 ---
 
 # Terms of Service
 
-**Effective Date:** September 03, 2026
+**Effective Date:** March 01, 2026
 **Last Updated:** April 01, 2026
 
-Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
+Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta, LLC (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
 
@@ -225,7 +225,7 @@ Barta reserves the right to remove or disable access to any User Content that vi
 
 ## 9.1 Barta's Intellectual Property
 
-The Service, including its design, features, functionality, logos, trademarks, and all underlying technology, is owned by Barta Inc. and is protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, sell, or create derivative works of any part of the Service without our prior written consent.
+The Service, including its design, features, functionality, logos, trademarks, and all underlying technology, is owned by Barta, LLC and is protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, distribute, sell, or create derivative works of any part of the Service without our prior written consent.
 
 ## 9.2 Copyright Infringement (DMCA)
 
@@ -240,7 +240,7 @@ We respect the intellectual property rights of others. If you believe that conte
 
 Send DMCA notices to:
 
-Barta Inc.
+Barta, LLC
 Attn: DMCA Agent
 1300 South Blvd STE 30071
 Charlotte, NC 28203
@@ -355,7 +355,7 @@ Some jurisdictions do not allow the exclusion or limitation of certain warrantie
 
 # 16. Indemnification
 
-You agree to indemnify, defend, and hold harmless Barta Inc. and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with:
+You agree to indemnify, defend, and hold harmless Barta, LLC and its officers, directors, employees, agents, and affiliates from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with:
 
 - Your use of the Service or any activity under your account.
 - Your User Content or listings.
@@ -428,7 +428,7 @@ Nothing in these Terms creates a partnership, joint venture, agency, franchise, 
 
 If you have questions about these Terms of Service, please contact us:
 
-Barta Inc.
+Barta, LLC
 1300 South Blvd STE 30071
 Charlotte, NC 28203
 United States
