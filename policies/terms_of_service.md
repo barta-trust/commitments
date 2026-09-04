@@ -1,12 +1,12 @@
 ---
-version: "1.0"
-effective: "2026-03-01"
+version: "1.1"
+effective: "2026-09-03"
 title: "Terms of Service"
 ---
 
 # Terms of Service
 
-**Effective Date:** March 01, 2026
+**Effective Date:** September 03, 2026
 **Last Updated:** April 01, 2026
 
 Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
