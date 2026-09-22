@@ -31,6 +31,7 @@ ATTESTATION_CACHE = Path("attestations/latest.json")
 FEE_CACHE = Path("catalogs/fees.yaml")
 CATALOG_ARCHIVE = Path("catalogs/archive")
 R2_PUBLIC_URL = "https://ledger.barta.shop"
+OPTIONAL_CATALOGS = {"in_person_fees": "in_person_fee", "ticket_fees": "ticket_fee"}
 
 
 def _load_public_keys() -> list[bytes]:
@@ -91,6 +92,25 @@ def _fetch_from_r2(s3_key: str, local_path: Path) -> bool:
     return local_path.exists()
 
 
+def _sync_catalog(name: str, today: str) -> bool:
+    cache = Path("catalogs") / f"{name}.yaml"
+    old_bytes = cache.read_bytes() if cache.exists() else None
+
+    if not _fetch_from_r2(f"catalogs/{name}.yaml", cache):
+        return False
+
+    if old_bytes and old_bytes != cache.read_bytes():
+        CATALOG_ARCHIVE.mkdir(parents=True, exist_ok=True)
+        archive_dest = CATALOG_ARCHIVE / f"{name}_{today}.yaml"
+        archive_dest.write_bytes(old_bytes)
+        old_hash = sha256_hex(old_bytes)
+        print(f"  {name} changed, archived old version -> {archive_dest} ({old_hash[:12]}…)", file=sys.stderr)
+
+    data = yaml.safe_load(cache.read_text(encoding="utf-8"))
+    cache.with_suffix(".json").write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def _fetch_attestation() -> dict | None:
     """Fetch latest attestation from R2 or local cache."""
     if not _fetch_from_r2("attestations/latest.json", ATTESTATION_CACHE):
@@ -120,30 +140,10 @@ def main() -> int:
     bor_path = "policies/creator_bill_of_rights.md"
     tos_path = "policies/terms_of_service.md"
 
-    # Fee schedule is pulled from R2 (published by backend attestation pipeline).
-    # If the hash changes, archive the old copy before overwriting.
-    old_fee_bytes: bytes | None = None
-    if FEE_CACHE.exists():
-        old_fee_bytes = FEE_CACHE.read_bytes()
-
-    _fetch_from_r2("catalogs/fees.yaml", FEE_CACHE)
-    if not FEE_CACHE.exists():
+    if not _sync_catalog("fees", today):
         print("  error: fee schedule not available (no R2 and no local cache)", file=sys.stderr)
         return 1
     fee_path = str(FEE_CACHE)
-
-    if old_fee_bytes and old_fee_bytes != FEE_CACHE.read_bytes():
-        CATALOG_ARCHIVE.mkdir(parents=True, exist_ok=True)
-        archive_dest = CATALOG_ARCHIVE / f"fees_{today}.yaml"
-        archive_dest.write_bytes(old_fee_bytes)
-        old_hash = sha256_hex(old_fee_bytes)
-        print(f"  fee schedule changed, archived old version -> {archive_dest} ({old_hash[:12]}…)", file=sys.stderr)
-
-    # Write a JSON mirror for the trust-center (which doesn't parse YAML)
-    fee_data = yaml.safe_load(FEE_CACHE.read_text(encoding="utf-8"))
-    FEE_CACHE.with_suffix(".json").write_text(
-        json.dumps(fee_data, indent=2) + "\n", encoding="utf-8",
-    )
 
     snapshot: dict = {
         "date": today,
@@ -156,6 +156,12 @@ def main() -> int:
         "tos_path": tos_path,
         "tos_hash": sha256_hex(canonicalize_markdown_bytes(tos_path)),
     }
+
+    for name, key in OPTIONAL_CATALOGS.items():
+        if _sync_catalog(name, today):
+            path = f"catalogs/{name}.yaml"
+            snapshot[f"{key}_path"] = path
+            snapshot[f"{key}_hash"] = sha256_hex(canonicalize_yaml_bytes(path))
 
     # Hash chaining: include previous root hash
     prev_hash = _get_prev_root_hash()
