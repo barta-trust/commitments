@@ -1,5 +1,5 @@
 ---
-version: "1.2"
+version: "1.2.1"
 effective: "2026-09-24"
 title: "Terms of Service"
 ---
@@ -13,7 +13,7 @@ Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agr
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
 
-**What changed in version 1.2:** new sections on creator shops and Backstage (4.5), creator memberships (4.6 and 5.4), tips (4.7), events (4.8 and 5.5), repeat violations (7.3), prohibited content (8.4), and moderation and reporting (8.5). Section 6.3 now describes when payments are held before release to the seller, and Section 13.2 covers suspension of memberships, tips and payouts.
+**What changed in version 1.2:** new sections on creator shops and Backstage (4.5), creator memberships (4.6 and 5.4), tips (4.7), events (4.8 and 5.5), repeat violations (7.3), prohibited content (8.4), and moderation and reporting (8.5). Section 6.3 now describes when payments are held before release to the seller, and Section 13.2 covers what suspension does to memberships, tips and held payments. Version 1.2.1 corrects this summary and adds tips to Section 13.2.
 
 ---
 
@@ -388,7 +388,7 @@ We may suspend or terminate your account, remove your content, or restrict your 
 - Your account has been involved in fraudulent, deceptive, or illegal activity.
 - You have not used your account for an extended period (12 months or more).
 
-Suspending or terminating a shop stops renewal of its creator memberships and hides its member-only content. For marketplace orders whose payment is still held (see Section 6.3), we may delay the transfer to the seller while we investigate.
+Suspending or terminating a shop stops renewal of its creator memberships, hides its member-only content, and stops it from receiving new tips. For marketplace orders whose payment is still held (see Section 6.3), we may delay the transfer to the seller while we investigate.
 
 ## 13.3 Effect of Termination
 
