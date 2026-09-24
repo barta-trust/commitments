@@ -1,13 +1,13 @@
 ---
-version: "1.1"
-effective: "2026-09-03"
+version: "1.2"
+effective: "2026-09-24"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** September 03, 2026  
-**Last Updated:** April 01, 2026
+**Effective Date:** September 24, 2026  
+**Last Updated:** September 24, 2026
 
 Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
@@ -58,6 +58,15 @@ Messages you send to other users through our messaging system, and any communica
 **Phone Number:**  
 When you register or log in using phone-based authentication, we collect your mobile phone number. We use it to send you one-time verification codes (OTP) via SMS. Your phone number is shared with our SMS delivery provider (Vonage) solely for the purpose of delivering these verification messages.
 
+**Creator Content and Memberships:**  
+If you run a creator shop, we collect the Backstage posts, polls, files and other content you publish, your membership offer details, and records of the memberships, member payments, refunds and tips on your shop. If you join a membership, we collect which creators you are a member of, your membership status and billing history, and your notification preferences for that creator. Card details are collected and held by Stripe, not by Barta.
+
+**Tips:**  
+When you send a tip, we collect the amount, the creator, any message you include, and whether you chose to tip anonymously.
+
+**Event Tickets and Booths:**  
+When you buy a ticket or apply for a vendor booth, we collect the event, the ticket or booth details, your purchase and payment status, and any information the organizer's application form asks for.
+
 **Imported Data:**  
 If you use our CSV import feature (e.g., importing listings from Etsy), we process the file contents to create listings on your behalf.
 
@@ -98,6 +107,7 @@ We use the information we collect to:
 - **Communicate with you.** Send transactional emails (order confirmations, shipping updates, message notifications) and, with your consent, marketing emails (newsletters, promotions, new features).
 - **Improve and personalize the Service.** Analyze usage patterns, diagnose technical issues, develop new features, and personalize your experience.
 - **Ensure safety and security.** Detect and prevent fraud, abuse, and unauthorized access; enforce our Terms of Service; and comply with legal obligations.
+- **Moderate content.** Screen uploaded files and text with automated tools, have staff review content that is flagged or reported, and take action on content that breaks our Terms.
 - **Fulfill seller onboarding.** Guide sellers through shop setup, Stripe Connect integration, listing creation, and shop publication.
 - **Provide customer support.** Respond to your inquiries, troubleshoot issues, and process your data rights requests.
 
@@ -114,6 +124,7 @@ If you are located in the European Economic Area (EEA), United Kingdom, or Switz
 | Transactional emails | Performance of a contract (Art. 6(1)(b)) |
 | Marketing emails | Consent (Art. 6(1)(a)) |
 | Fraud prevention and security | Legitimate interest (Art. 6(1)(f)) |
+| Content moderation and reporting | Legitimate interest (Art. 6(1)(f)); legal obligation where reporting is required (Art. 6(1)(c)) |
 | Analytics and service improvement | Legitimate interest (Art. 6(1)(f)) |
 | Advertising attribution and campaign measurement | Legitimate interest (Art. 6(1)(f)) |
 | Legal compliance | Legal obligation (Art. 6(1)(c)) |
@@ -131,8 +142,20 @@ We share information only in the following circumstances:
 **Between Buyers and Sellers**  
 When a transaction occurs, we share necessary information between the buyer and seller to fulfill the order (e.g., shipping address, buyer name). Seller shop profiles, including shop name, bio, location, and listings, are publicly visible.
 
+**Between Creators and Members**  
+A creator can see the members of their membership, including each member's status and price, and the billing history needed to issue refunds. Members' card details are never shared with creators.
+
+**Tips**  
+When you tip a creator, the creator sees your tip and any message. Unless you choose to tip anonymously, your username, and details of the tip such as the amount and message, may be visible on the creator's page as a recent supporter.
+
+**Between Event Organizers and Attendees or Vendors**  
+When you buy a ticket, the organizer receives your name, email address and ticket details so they can admit you. When you apply for a booth, the organizer receives your shop, your application answers and your booth category.
+
 **Service Providers**  
 We share information with third-party service providers who process data on our behalf.
+
+**Child Safety Reporting**
+If we find child sexual abuse material, we report it and the associated account information to the National Center for Missing & Exploited Children, as US law requires.
 
 **Legal Requirements**
 We may disclose your information if required by law, regulation, legal process, or governmental request, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.
@@ -149,9 +172,9 @@ We may share your information for any other purpose with your explicit consent.
 
 | Provider | Purpose | Data Processed | Privacy Policy |
 |---------|---------|---------------|---------------|
-| Supabase | Authentication, database, backend infrastructure | Account data, profile data, listings, messages | https://supabase.com/privacy |
+| Supabase | Authentication, database, file storage, backend infrastructure | Account data, profile data, listings, messages, Backstage content, member-only files | https://supabase.com/privacy |
 | Stripe | Payment processing and seller payouts | Name, email, bank details, identity documents, transaction data | https://stripe.com/privacy |
-| Cloudflare | Content delivery and security | IP address, browser metadata, request data | https://cloudflare.com/privacypolicy |
+| Cloudflare | Content delivery, security, bot protection, image and video hosting | IP address, browser metadata, request data, uploaded images and videos | https://cloudflare.com/privacypolicy |
 | Postmark | Transactional and marketing email delivery | Email address, name, email content | https://postmarkapp.com/privacy-policy |
 | Vonage | SMS delivery for phone verification | Phone number, SMS message content | https://www.vonage.com/legal/privacy-policy/ |
 
