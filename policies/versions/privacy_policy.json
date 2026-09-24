@@ -1,7 +1,14 @@
 {
   "document": "privacy-policy",
-  "current_version": "1.1",
+  "current_version": "1.2",
   "versions": [
+    {
+      "version": "1.2",
+      "published": "2026-09-24",
+      "effective": "2026-09-24",
+      "file": "policies/privacy_policy.md",
+      "sha256": "6bc58edc55749147ace765863edacf764d96ae73d7a5128af2aa2e1cb38493ad"
+    },
     {
       "version": "1.1",
       "published": "2026-09-04",
