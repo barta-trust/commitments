@@ -1,17 +1,19 @@
 ---
-version: "1.1"
-effective: "2026-09-03"
+version: "1.2"
+effective: "2026-09-24"
 title: "Terms of Service"
 ---
 
 # Terms of Service
 
-**Effective Date:** September 03, 2026
-**Last Updated:** April 01, 2026
+**Effective Date:** September 24, 2026 for accounts created on or after that date. For accounts created earlier, this version takes effect on October 8, 2026, 14 days after we notified you (see Section 18).
+**Last Updated:** September 24, 2026
 
 Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
+
+**What changed in version 1.2:** new sections on creator shops and Backstage (4.5), creator memberships (4.6 and 5.4), tips (4.7), events (4.8 and 5.5), repeat violations (7.3), prohibited content (8.4), and moderation and reporting (8.5). Section 6.3 now describes when payments are held before release to the seller, and Section 13.2 covers suspension of memberships, tips and payouts.
 
 ---
 
@@ -104,11 +106,38 @@ As a seller, you represent, warrant, and agree that:
 
 ## 4.3 Seller Return Policies
 
-Sellers are responsible for establishing and clearly communicating their own return and refund policies in their shop profile or listing descriptions. Return policies must comply with applicable consumer protection laws. Barta may mediate disputes between buyers and sellers as described in Section 11.
+Sellers are responsible for establishing and clearly communicating their own return and refund policies in their shop profile or listing descriptions. Return policies must comply with applicable consumer protection laws. Barta may mediate disputes between buyers and sellers as described in Section 12.
 
 ## 4.4 Shop Content
 
 You retain ownership of the content you upload to your shop (photos, descriptions, logos). By uploading content to the Service, you grant Barta a non-exclusive, worldwide, royalty-free license to use, display, reproduce, and distribute that content as necessary to operate and promote the Service and your listings. This license ends when you delete the content or your account, except where the content has been shared with other users or is required for legal compliance.
+
+## 4.5 Creator Shops and Backstage
+
+A creator shop includes a public creator page and a Backstage feed where the creator can publish posts, works in progress, polls, upcoming drops and livestreams. Everything published to a creator page or Backstage is User Content under Section 8 and must follow the content rules in Section 8.4, whether it is public or limited to members.
+
+## 4.6 Creator Memberships
+
+Creators may offer a monthly membership that gives members access to member-only Backstage posts and polls and any other benefits the creator describes in the offer.
+
+- **The creator is the seller.** The creator offers the membership and is responsible for delivering what the offer describes. Membership payments are processed by Stripe on the creator's connected account.
+- **Fees.** Barta charges a platform fee on each membership payment. The fee and an estimate of what the creator receives are shown before a creator publishes an offer.
+- **Pricing.** Creators set their own monthly price. A price change applies to new members only; existing members keep the price they joined at.
+- **Ending an offering.** A creator may close enrollment to new members at any time. A creator may also end the offering entirely, which cancels renewal for every member. Members keep access through the end of the period they have already paid for, and the creator must keep that member content available until then.
+- **Content.** Member-only content must follow Section 8.4. Creators may not use a membership to sell sexually suggestive content (see Section 8.4).
+- **Refunds.** Creators may refund a membership payment from their membership settings. A full refund of the current period ends that member's access and cancels their renewal; a partial refund does not.
+
+## 4.7 Tips
+
+Buyers may send a tip to a creator for the work and content the creator shares on Barta. A tip is a voluntary payment for content the creator has already provided. It is not a purchase, a donation, or a transfer of money between individuals, and it does not entitle the sender to any good or service. Tips are paid to the creator's connected account. Barta does not currently charge a platform fee on tips. Depending on how a tip is paid, Stripe's processing fee may be deducted from the amount the creator receives. Tips are generally non-refundable. Tips may not be solicited or accepted for content that breaks Section 8.4.
+
+## 4.8 Event Organizers
+
+A shop may host events on Barta and sell tickets and vendor booth space.
+
+- **The organizer is the seller.** Ticket and booth payments are processed by Stripe and paid to the organizer's connected account after Barta deducts its platform fee. The organizer is responsible for running the event as described.
+- **Organizer terms.** Organizers set the terms for their event, including booth refund windows, using the terms Barta provides. Some terms are fixed by Barta and cannot be removed. Organizer terms must not impose fines, penalties or late fees on vendors.
+- **Barta's role.** Barta provides the listing, ticketing and payment tools. Barta does not organize, operate or supervise third-party events and is not responsible for what happens at them.
 
 ---
 
@@ -123,7 +152,7 @@ When you purchase an item through the Service, you are entering into a transacti
 - Review the seller's listing description, photos, return policy, and shop information before making a purchase.
 - Provide accurate shipping information.
 - Communicate with the seller in good faith regarding any issues with your order.
-- Do not initiate chargebacks through your payment provider without first attempting to resolve the issue with the seller and, if necessary, through Barta's dispute mediation process (Section 11).
+- Do not initiate chargebacks through your payment provider without first attempting to resolve the issue with the seller and, if necessary, through Barta's dispute mediation process (Section 12).
 
 ## 5.3 Seller Responsibility for Listings
 
@@ -134,6 +163,18 @@ Barta does not manufacture, store, or inspect items prior to shipment.
 While Barta is not the seller of record for marketplace listings, we work to maintain a safe marketplace and may investigate reports of fraud, misrepresentation, or abuse of the platform.
 
 Any product warranties or guarantees are provided by the seller unless otherwise stated.
+
+## 5.4 Joining a Membership
+
+- **Automatic renewal.** A creator membership renews automatically each month at the price shown when you join, and your payment method is charged on each renewal date until you cancel.
+- **Cancelling.** You can cancel at any time from My memberships. Your access continues through the end of the period you have paid for, and you will not be charged again.
+- **Refunds.** Membership payments are not refunded for partial periods, unless the creator chooses to refund you or the law requires it.
+- **Failed payments.** If a renewal payment fails, your access may continue for a short grace period while you update your payment method. If payment is not made, the membership ends.
+- **Member content.** Member-only content is licensed to you for personal, non-commercial viewing. You may not copy, download for redistribution, share, resell or publicly post it.
+
+## 5.5 Event Tickets
+
+When you buy a ticket, you are buying it from the event organizer. Refunds follow the refund window the organizer sets for that event. Tickets cannot currently be transferred to another person. Questions about the event itself should go to the organizer.
 
 ---
 
@@ -149,7 +190,7 @@ All payments are processed through **Stripe**. By using the Service as a buyer o
 
 ## 6.3 Seller Payouts
 
-Seller payouts are processed through Stripe Connect according to Stripe's standard payout schedule. Barta does not hold buyer funds. Payments flow through Stripe's infrastructure. Payout timing and availability are subject to Stripe's policies and any applicable holds or reserves.
+Seller payouts are processed through Stripe Connect according to Stripe's standard payout schedule. Payments flow through Stripe's infrastructure. For marketplace orders, the payment is captured into Barta's Stripe balance and held until the order is delivered, picked up or handed off, and then transferred to the seller. Event ticket and booth payments are also collected into Barta's Stripe balance and transferred to the organizer. Membership payments and tips are charged directly on the creator's connected account and are not held by Barta. Payout timing and availability are subject to Stripe's policies and any applicable holds or reserves.
 
 ## 6.4 Taxes
 
@@ -157,7 +198,7 @@ Sellers are responsible for determining, collecting, and remitting any applicabl
 
 ## 6.5 Refunds
 
-Refunds for purchases are handled according to the seller's return policy. If a dispute arises and Barta mediates (see Section 11), Barta may direct a seller to issue a refund. Refunds are processed through Stripe and may take 5-10 business days to appear in the buyer's account.
+Refunds for purchases are handled according to the seller's return policy. If a dispute arises and Barta mediates (see Section 12), Barta may direct a seller to issue a refund. Refunds are processed through Stripe and may take 5-10 business days to appear in the buyer's account.
 
 ---
 
@@ -199,13 +240,25 @@ You agree not to:
 - Use the messaging system for spam, unsolicited advertising, or phishing.
 - Engage in money laundering, terrorist financing, or other financial crimes through the platform.
 
+## 7.3 Repeat Violations
+
+We keep records of the enforcement actions we take.
+
+- A first confirmed violation of these Terms usually results in removal of the content.
+- Further violations may result in suspension of the account or shop, including stopping its creator memberships.
+- Continued or serious violations result in permanent termination.
+- Accounts that repeatedly infringe the intellectual property of others will be terminated.
+- Creating a new account to avoid an enforcement action is prohibited and results in termination of all associated accounts (see Section 2.3).
+
+We may skip any step for severe violations, including illegal content.
+
 ---
 
 # 8. User Content
 
 ## 8.1 Your Content
 
-You retain ownership of all content you submit to the Service, including listing photos, descriptions, shop profiles, and messages (**"User Content"**). By submitting User Content, you grant Barta a non-exclusive, worldwide, royalty-free, sublicensable, and transferable license to use, reproduce, modify, display, and distribute your User Content solely for the purpose of operating, developing, and promoting the Service.
+You retain ownership of all content you submit to the Service, including listing photos, descriptions, shop profiles, creator pages, Backstage posts, member-only content, comments, and messages (**"User Content"**). By submitting User Content, you grant Barta a non-exclusive, worldwide, royalty-free, sublicensable, and transferable license to use, reproduce, modify, display, and distribute your User Content solely for the purpose of operating, developing, and promoting the Service.
 
 ## 8.2 Content Standards
 
@@ -218,6 +271,23 @@ You are solely responsible for your User Content. You represent and warrant that
 ## 8.3 Content Removal
 
 Barta reserves the right to remove or disable access to any User Content that violates these Terms or that we determine, in our sole discretion, is harmful, objectionable, or otherwise inappropriate. We are not obligated to monitor all User Content but may do so at our discretion.
+
+## 8.4 Prohibited Content
+
+The following content is not allowed anywhere on the Service, including listings, shop and creator pages, Backstage posts, member-only content, comments and messages:
+
+- **Sexual content.** Nudity, sexually explicit material, or content offering sexual services. Costume, cosplay, body paint and prop photography is allowed as long as it is not sexually explicit and shows no nudity. Memberships and tips may not be used to sell sexually suggestive content, including so-called "lewd" or "spicy" photo sets.
+- **Child sexual abuse material.** We have zero tolerance. We remove it, terminate the account, and report it to the National Center for Missing & Exploited Children as the law requires.
+- **Intellectual property infringement.** Content you do not have the rights to, including leaked, pirated or copied work.
+- **Violent extremism and hate.** Content that promotes, glorifies or incites violence or terrorism, or hatred against individuals or groups based on race, ethnicity, religion, disability, gender, sexual orientation, national origin, or any other protected characteristic.
+- **Harassment and private information.** Content that harasses or threatens others, or shares another person's personal, financial or confidential information.
+- **Prohibited items.** Content that promotes or offers any item prohibited under Section 7.1.
+
+You may not charge for, or accept tips or membership payments for, any of this content.
+
+## 8.5 Moderation and Reporting
+
+We use automated tools to screen some content, and some content is held for human review before it is shown, including files attached to member-only posts. You can report content you believe breaks these Terms from within the Service, and you can report copyright infringement under Section 9.2. We review reports and remove content that breaks these Terms, and we apply Section 7.3 to repeat violations.
 
 ---
 
@@ -317,6 +387,8 @@ We may suspend or terminate your account, remove your content, or restrict your 
 - Your conduct poses a risk of harm to other users, Barta, or third parties.
 - Your account has been involved in fraudulent, deceptive, or illegal activity.
 - You have not used your account for an extended period (12 months or more).
+
+Suspending or terminating a shop stops renewal of its creator memberships and hides its member-only content. For marketplace orders whose payment is still held (see Section 6.3), we may delay the transfer to the seller while we investigate.
 
 ## 13.3 Effect of Termination
 
