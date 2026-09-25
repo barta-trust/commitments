@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "seller_processing_rate_bps": 200,
+  "buyer_infrastructure_fee_cents": 48,
+  "buyer_marketplace_rate_bps": 100
+}

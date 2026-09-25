@@ -1,0 +1,8 @@
+# Online event ticket fee schedule v1.
+# Buyer pays 5% + $0.89 per ticket; PWYC takes it out of the chosen amount.
+# Any change here triggers a new attestation digest.
+
+version: 1
+
+rate_bps: 500
+fixed_cents: 89

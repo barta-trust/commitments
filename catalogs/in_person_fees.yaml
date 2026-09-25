@@ -1,0 +1,13 @@
+# In-person (QR / Tap to Pay) fee schedule v1.
+# Booth sales run a lower fee than online: 2% seller, 1% + $0.48 buyer. Any change here triggers a new attestation digest.
+
+version: 1
+
+# Seller: 2.0% deducted from seller payout (processing).
+seller_processing_rate_bps: 200
+
+# Buyer: $0.48 flat per transaction (infrastructure fee).
+buyer_infrastructure_fee_cents: 48
+
+# Buyer: 1.0% added to buyer total (marketplace rate).
+buyer_marketplace_rate_bps: 100
