@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-26",
+  "fee_path": "catalogs/fees.yaml",
+  "fee_hash": "61a5defa1b14290c1d1ca21c06b63bf2475e7c1b675651834fb9cb7388ffbdd9",
+  "policy_path": "policies/privacy_policy.md",
+  "policy_hash": "6bc58edc55749147ace765863edacf764d96ae73d7a5128af2aa2e1cb38493ad",
+  "bor_path": "policies/creator_bill_of_rights.md",
+  "bor_hash": "86cdd1b508b84ddbfd0b56255245f885cbe3c4aef85245fff455e0d4aae06b0f",
+  "tos_path": "policies/terms_of_service.md",
+  "tos_hash": "49ff032134247e1cbbba9205bbfc8dfa5e033602447c3c9d76ea10290632f5a1",
+  "in_person_fee_path": "catalogs/in_person_fees.yaml",
+  "in_person_fee_hash": "5e96b146a3018bdc9192a1498cead3290fbb8a6d444a95a35fee5e37ac2c9809",
+  "ticket_fee_path": "catalogs/ticket_fees.yaml",
+  "ticket_fee_hash": "3ac246e7e5551c58b5b4eb845cb11f5b769c85bf7c429dbd01feb0529933c937",
+  "prev_root_hash": "68dc1394ca19b83762fcf9ce8d692e6a333e461760107080ad0956edb94e4f11",
+  "attestation_hash": "e7e51a55ac9cfff6c0b370f655b71fdf631b24bf9f3c40ab9ebee229751f7507",
+  "attestation_commit": "4fa8f00348a202dfd72aeb2feee47e7db471f8b4"
+}
