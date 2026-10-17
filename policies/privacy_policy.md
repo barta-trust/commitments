@@ -1,13 +1,13 @@
 ---
-version: "1.2"
-effective: "2026-09-24"
+version: "1.3"
+effective: "2026-10-18"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** September 24, 2026  
-**Last Updated:** September 24, 2026
+**Effective Date:** October 18, 2026  
+**Last Updated:** October 16, 2026
 
 Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
@@ -104,7 +104,7 @@ We use the information we collect to:
 
 - **Provide and operate the Service.** Create and maintain your account, process listings, facilitate transactions between buyers and sellers, and enable messaging.
 - **Process payments.** Connect your Stripe account, facilitate payouts to sellers, and process buyer purchases.
-- **Communicate with you.** Send transactional emails (order confirmations, shipping updates, message notifications) and, with your consent, marketing emails (newsletters, promotions, new features).
+- **Communicate with you.** Send transactional emails (order confirmations, shipping updates, message notifications), marketing emails (newsletters, promotions, new features), and updates from organizers about events you take part in. You can turn off marketing emails and event updates at any time (see [Marketing Communications](#14-marketing-communications)).
 - **Improve and personalize the Service.** Analyze usage patterns, diagnose technical issues, develop new features, and personalize your experience.
 - **Ensure safety and security.** Detect and prevent fraud, abuse, and unauthorized access; enforce our Terms of Service; and comply with legal obligations.
 - **Moderate content.** Screen uploaded files and text with automated tools, have staff review content that is flagged or reported, and take action on content that breaks our Terms.
@@ -122,7 +122,8 @@ If you are located in the European Economic Area (EEA), United Kingdom, or Switz
 | Account creation and service delivery | Performance of a contract (Art. 6(1)(b)) |
 | Payment processing via Stripe | Performance of a contract (Art. 6(1)(b)) |
 | Transactional emails | Performance of a contract (Art. 6(1)(b)) |
-| Marketing emails | Consent (Art. 6(1)(a)) |
+| Marketing emails | Legitimate interest (Art. 6(1)(f)); you can object at any time by unsubscribing |
+| Event updates from organizers | Legitimate interest (Art. 6(1)(f)); you can object at any time by unsubscribing |
 | Fraud prevention and security | Legitimate interest (Art. 6(1)(f)) |
 | Content moderation and reporting | Legitimate interest (Art. 6(1)(f)); legal obligation where reporting is required (Art. 6(1)(c)) |
 | Analytics and service improvement | Legitimate interest (Art. 6(1)(f)) |
@@ -238,7 +239,7 @@ Depending on your location, you may have rights including:
 - Restrict certain processing
 - Receive portable copies of your data
 - Object to legitimate interest processing
-- Withdraw consent for marketing
+- Opt out of marketing emails and event updates
 
 To exercise these rights, contact **privacy@barta.shop**. We will respond to your request within 30 days (or 45 days if an extension is necessary, with notice). We may ask you to verify your identity before processing your request.
 
@@ -306,11 +307,11 @@ While we take reasonable precautions, no method of transmission over the interne
 
 # 14. Marketing Communications
 
-With your consent, we may send marketing emails about features, promotions, or marketplace updates.
+We send marketing emails about features, promotions, and marketplace updates to account holders. Event organizers can also email the people taking part in their events, such as vendors and ticket holders, through Barta. Organizers never see the recipients' email addresses through this feature.
 
-You can unsubscribe anytime using the link in emails or by contacting **privacy@barta.shop**.
+Both are on by default. You can turn either off at any time in your notification settings, with the unsubscribe link in any of these emails, or by contacting **privacy@barta.shop**. Turning off marketing emails does not stop event updates, and turning off event updates does not stop marketing emails.
 
-Transactional emails (orders, security alerts) will still be sent as necessary.
+Transactional emails (orders, tickets, security alerts) will still be sent as necessary.
 
 ---
 
