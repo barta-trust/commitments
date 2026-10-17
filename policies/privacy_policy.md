@@ -1,12 +1,12 @@
 ---
 version: "1.3"
-effective: "2026-10-16"
+effective: "2026-10-18"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** October 16, 2026  
+**Effective Date:** October 18, 2026  
 **Last Updated:** October 16, 2026
 
 Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
