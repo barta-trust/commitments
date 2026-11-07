@@ -1,19 +1,19 @@
 ---
-version: "1.2.1"
-effective: "2026-09-24"
+version: "1.3"
+effective: "2026-11-06"
 title: "Terms of Service"
 ---
 
 # Terms of Service
 
-**Effective Date:** September 24, 2026 for accounts created on or after that date. For accounts created earlier, this version takes effect on October 8, 2026, 14 days after we notified you (see Section 18).
-**Last Updated:** September 24, 2026
+**Effective Date:** November 6, 2026
+**Last Updated:** November 6, 2026
 
 Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
 
-**What changed in version 1.2:** new sections on creator shops and Backstage (4.5), creator memberships (4.6 and 5.4), tips (4.7), events (4.8 and 5.5), repeat violations (7.3), prohibited content (8.4), and moderation and reporting (8.5). Section 6.3 now describes when payments are held before release to the seller, and Section 13.2 covers what suspension does to memberships, tips and held payments. Version 1.2.1 corrects this summary and adds tips to Section 13.2.
+**What changed in version 1.3:** Section 8.5 now points to the published list of rules we enforce and says what a moderation notice tells you. New Section 8.6 explains how to ask for a review of a moderation decision, and Section 13.2 says that suspensions and terminations come with a notice and a way to ask for a review. These changes only add to your rights, so they take effect right away for every account.
 
 ---
 
@@ -289,6 +289,14 @@ You may not charge for, or accept tips or membership payments for, any of this c
 
 We use automated tools to screen some content, and some content is held for human review before it is shown, including files attached to member-only posts. You can report content you believe breaks these Terms from within the Service, and you can report copyright infringement under Section 9.2. We review reports and remove content that breaks these Terms, and we apply Section 7.3 to repeat violations.
 
+Every moderation decision cites a rule from our published moderation rules, and every rule names the section of these Terms it enforces. The current list is public at [github.com/barta-trust/commitments](https://github.com/barta-trust/commitments/blob/main/catalogs/moderation_rules.yaml). When we remove, hide or restrict your content, or restrict your shop or account, we tell you which rule applies, what we did, and how to fix it when it can be fixed. You can see these notices in your account settings under Account standing. We may leave out details when the law requires it or when sharing them would put someone at risk.
+
+## 8.6 Asking for a Review
+
+If you think a moderation decision is wrong, you can ask us to review it once. Send the request from the notice under Account standing and tell us why you think the decision should change. If we closed your account, the email we send you includes a link you can use to ask for a review for 30 days.
+
+A member of our team looks at the request and we email you the result. If we reverse the decision, we restore the content or access we took away where we can. Content that is waiting for review before it is shown has not been decided yet, so there is nothing to ask us to review until we decide. Decisions involving child sexual abuse material are final.
+
 ---
 
 # 9. Intellectual Property
@@ -381,7 +389,7 @@ You may close your account at any time by contacting us at support@barta.shop. U
 
 ## 13.2 Termination or Suspension by Barta
 
-We may suspend or terminate your account, remove your content, or restrict your access to the Service at any time, with or without notice, if we reasonably believe that:
+We may suspend or terminate your account, remove your content, or restrict your access to the Service at any time if we reasonably believe that:
 
 - You have violated these Terms or any applicable law.
 - Your conduct poses a risk of harm to other users, Barta, or third parties.
@@ -389,6 +397,8 @@ We may suspend or terminate your account, remove your content, or restrict your 
 - You have not used your account for an extended period (12 months or more).
 
 Suspending or terminating a shop stops renewal of its creator memberships, hides its member-only content, and stops it from receiving new tips. For marketplace orders whose payment is still held (see Section 6.3), we may delay the transfer to the seller while we investigate.
+
+When we suspend or terminate an account or shop, we tell you which rule applies and how to ask for a review under Section 8.6, unless the law prevents us or telling you would put someone at risk. We may act first and tell you right after when we need to stop ongoing harm.
 
 ## 13.3 Effect of Termination
 
