@@ -1,17 +1,19 @@
 ---
-version: "1.3"
-effective: "2026-11-06"
+version: "1.4"
+effective: "2026-11-07"
 title: "Terms of Service"
 ---
 
 # Terms of Service
 
-**Effective Date:** November 6, 2026
-**Last Updated:** November 6, 2026
+**Effective Date:** November 7, 2026
+**Last Updated:** November 7, 2026
 
 Welcome to Barta. These Terms of Service (**"Terms"**) are a legally binding agreement between you and Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**). They govern your access to and use of the Barta marketplace platform at **barta.shop** and its subdomains, including all related services, features, content, and applications (collectively, the **"Service"**).
 
 By creating an account or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.
+
+**What changed in version 1.4:** Section 11 now covers order alert texts, which you can choose to turn on in your notification settings, and names Twilio as our SMS provider. Order alerts are optional and only apply if you opt in, so this change takes effect right away for every account.
 
 **What changed in version 1.3:** Section 8.5 now points to the published list of rules we enforce and says what a moderation notice tells you. New Section 8.6 explains how to ask for a review of a moderation decision, and Section 13.2 says that suspensions and terminations come with a notice and a way to ask for a review. These changes only add to your rights, so they take effect right away for every account.
 
@@ -345,15 +347,20 @@ Barta reserves the right to monitor, review, and store messages for the purposes
 
 # 11. SMS/Text Messaging Terms
 
-By providing your phone number and requesting a verification code, you consent to receive SMS text messages from Barta for account authentication purposes.
+Barta sends two kinds of text messages.
 
-- **Message frequency:** One message per request.
+**Verification codes.** By providing your phone number and requesting a verification code, you consent to receive SMS text messages from Barta for account authentication purposes. You receive one message per request.
+
+**Order alerts.** If you turn on text alerts in your notification settings and check the consent box, you agree to receive automated text messages from Barta about your own orders: new orders, shipping, pickup, delivery, refunds and payouts. Texts are sent only to the verified phone number on your account. Message frequency varies with your order activity. Consent is not required to make a purchase. Order alerts never include marketing or promotional content.
+
+For both:
+
 - **Message and data rates may apply.** Your mobile carrier's standard messaging rates apply.
-- **Opt-out:** Text **STOP** to opt out of receiving SMS messages from Barta.
-- **Help:** Text **HELP** for help or contact privacy@barta.shop.
+- **Opt-out:** Reply **STOP** to any message to stop receiving texts from that program. You can also turn order alerts off in your notification settings. Reply **START** to resume order alerts after replying STOP.
+- **Help:** Reply **HELP** for help or contact privacy@barta.shop.
 - **Carriers are not liable for delayed or undelivered messages.**
 
-SMS messages are delivered through our third-party provider, Vonage. By consenting to receive SMS messages, you acknowledge that your phone number will be shared with Vonage solely for the purpose of delivering verification codes. See our [Privacy Policy](https://trust.barta.shop/privacy/) for details on how we handle your phone number.
+SMS messages are delivered through our third-party provider, Twilio. By consenting to receive SMS messages, you acknowledge that your phone number will be shared with Twilio solely for the purpose of delivering these messages. We never sell or share your mobile phone number or text message opt-in data with third parties for their marketing. See our [Privacy Policy](https://trust.barta.shop/privacy/) for details on how we handle your phone number.
 
 ---
 

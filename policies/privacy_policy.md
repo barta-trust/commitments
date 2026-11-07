@@ -1,13 +1,13 @@
 ---
-version: "1.3"
-effective: "2026-10-18"
+version: "1.4"
+effective: "2026-11-07"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** October 18, 2026  
-**Last Updated:** October 16, 2026
+**Effective Date:** November 7, 2026  
+**Last Updated:** November 7, 2026
 
 Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
@@ -56,7 +56,11 @@ When you connect a Stripe account for selling, Stripe collects your bank account
 Messages you send to other users through our messaging system, and any communications you send to our support team.
 
 **Phone Number:**  
-When you register or log in using phone-based authentication, we collect your mobile phone number. We use it to send you one-time verification codes (OTP) via SMS. Your phone number is shared with our SMS delivery provider (Vonage) solely for the purpose of delivering these verification messages.
+When you register or log in using phone-based authentication, we collect your mobile phone number. We use it to send you one-time verification codes (OTP) via SMS.
+
+If you turn on text alerts in your notification settings, we also use your verified mobile number to send you texts about your own orders, such as new orders, shipping, pickup, delivery, refunds and payouts. We record when and how you agreed, the wording you agreed to, and when you opt out. You can opt out at any time by replying STOP to any text or by turning text alerts off in your settings.
+
+Your phone number is shared with our SMS delivery provider (Twilio) solely to deliver these messages. **We never sell or share mobile phone numbers or text message opt-in data with third parties or affiliates for their marketing or promotional purposes.**
 
 **Creator Content and Memberships:**  
 If you run a creator shop, we collect the Backstage posts, polls, files and other content you publish, your membership offer details, and records of the memberships, member payments, refunds and tips on your shop. If you join a membership, we collect which creators you are a member of, your membership status and billing history, and your notification preferences for that creator. Card details are collected and held by Stripe, not by Barta.
@@ -177,7 +181,7 @@ We may share your information for any other purpose with your explicit consent.
 | Stripe | Payment processing and seller payouts | Name, email, bank details, identity documents, transaction data | https://stripe.com/privacy |
 | Cloudflare | Content delivery, security, bot protection, image and video hosting | IP address, browser metadata, request data, uploaded images and videos | https://cloudflare.com/privacypolicy |
 | Postmark | Transactional and marketing email delivery | Email address, name, email content | https://postmarkapp.com/privacy-policy |
-| Vonage | SMS delivery for phone verification | Phone number, SMS message content | https://www.vonage.com/legal/privacy-policy/ |
+| Twilio | SMS delivery for phone verification and opt-in order alerts | Phone number, SMS message content | https://www.twilio.com/legal/privacy |
 
 These providers process data according to their own privacy policies and our data processing agreements.
 
