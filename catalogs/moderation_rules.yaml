@@ -1,0 +1,1123 @@
+# Moderation rules: every enforcement action Barta takes cites one rule from this file.
+# Published to the commitments repo and attested on deploy, so a rule's id never changes
+# and a rule is never deleted. Retire one with `deprecated: true` instead.
+# Each rule must trace to a Terms of Service section listed under tos_sections.
+
+version: "1.0"
+effective: "2026-11-07"
+terms_of_service_version: "1.2.1"
+
+tos_sections:
+  "1": Eligibility
+  "2.1": Account Creation
+  "2.2": Account Security
+  "2.3": One Account Per Person
+  "4.2": Seller Responsibilities
+  "4.3": Seller Return Policies
+  "4.6": Creator Memberships
+  "4.7": Tips
+  "4.8": Event Organizers
+  "5.2": Buyer Responsibilities
+  "7.1": Prohibited Items
+  "7.2": Prohibited Conduct
+  "7.3": Repeat Violations
+  "8.2": Content Standards
+  "8.3": Content Removal
+  "8.4": Prohibited Content
+  "8.5": Moderation and Reporting
+  "9.2": Copyright Infringement (DMCA)
+  "9.3": Counter-Notification
+  "10": Messaging
+  "13.2": Termination or Suspension by Barta
+
+categories:
+  - id: prohibited_items
+    title: Prohibited items
+  - id: listing_accuracy
+    title: Listing accuracy
+  - id: seller_obligations
+    title: Selling, events and memberships
+  - id: content
+    title: Content
+  - id: intellectual_property
+    title: Intellectual property
+  - id: conduct
+    title: Conduct toward others
+  - id: fees_and_payments
+    title: Fees and payments
+  - id: platform_integrity
+    title: Platform integrity
+  - id: accounts
+    title: Accounts
+  - id: review
+    title: Review in progress
+
+actions:
+  warn: A warning. Nothing was taken down.
+  hide: Hidden from buyers while it is reviewed.
+  reject: Not approved to go live.
+  remove: Taken down after it was live.
+  suspend: Paused until the issue is resolved.
+  close: Closed for good.
+  ban: Permanently banned from Barta.
+
+severities:
+  low: Usually fixed by editing. Repeats are noted but rarely lead to more.
+  medium: Content comes down. Repeats can lead to a shop or account suspension (Terms 7.3).
+  high: Content comes down and the shop or account may be suspended on a first offense.
+  critical: The account is closed. Barta may skip every warning step (Terms 7.3).
+
+automated:
+  # Sentinel classifier labels (lowercase) mapped to the rule an automated block cites.
+  # The highest-scoring mapped label wins; an unmapped block falls back to block_default.
+  sentinel_labels:
+    sexual: content.sexually_explicit
+    sexual/minors: content.csam
+    csam: content.csam
+    hate: content.hate
+    hate/threatening: content.hate
+    harassment: conduct.harassment
+    harassment/threatening: conduct.threats
+    violence: content.objectionable
+    violence/graphic: content.objectionable
+    self-harm: content.objectionable
+    self-harm/intent: content.objectionable
+    self-harm/instructions: content.objectionable
+    illicit: conduct.unlawful_use
+    illicit/violent: conduct.unlawful_use
+    platform_evasion: fees.off_platform_payment
+    scam: fraud.scam
+    explicit nudity: content.nudity
+    nudity: content.nudity
+    graphic male nudity: content.nudity
+    graphic female nudity: content.nudity
+    sexual activity: content.sexually_explicit
+    explicit sexual activity: content.sexually_explicit
+    graphic violence or gore: content.objectionable
+    visually disturbing: content.objectionable
+    hate symbols: content.hate
+    drugs: prohibited_item.drugs
+    drug products: prohibited_item.drugs
+    tobacco: prohibited_item.tobacco_vaping
+    alcohol: prohibited_item.alcohol
+  block_default: content.objectionable
+  review_default: review.held_for_review
+
+rules:
+  # ---------------------------------------------------------------- prohibited items
+  - id: prohibited_item.weapons
+    category: prohibited_items
+    tos_sections: ["7.1", "8.4"]
+    title: Weapons and ammunition
+    explanation: >-
+      Firearms, ammunition, explosives and working weapons of any kind can't be sold on Barta.
+      Costume and prop weapons are fine when they are made of foam, resin or another
+      non-functional material and the listing says so clearly.
+    targets: [listing, media, backstage_post, event, message]
+    actions: [reject, remove]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      If this is a prop or costume piece, say in the title and description what it is made of
+      and that it does not work as a weapon, then request a review. Real weapons, parts and
+      ammunition can't be relisted.
+    appealable: true
+
+  - id: prohibited_item.drugs
+    category: prohibited_items
+    tos_sections: ["7.1", "8.4"]
+    title: Illegal drugs and paraphernalia
+    explanation: >-
+      Controlled substances, equipment for making drugs, and drug paraphernalia can't be listed
+      or promoted on Barta.
+    targets: [listing, media, backstage_post, message, event]
+    actions: [reject, remove, suspend]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.counterfeit
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Counterfeit goods
+    explanation: >-
+      Items made to imitate a branded product and pass as the real thing aren't allowed.
+      Authentic branded items, handmade pieces inspired by a franchise, and customized products
+      are welcome as long as they are honestly described.
+    targets: [listing, media]
+    actions: [reject, remove, suspend]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      If you made this piece yourself, describe it as handmade or fan-made, and take out brand
+      logos, tags or packaging that make it look like the original. If it is authentic, request
+      a review and tell us how you can show that.
+    appealable: true
+
+  - id: prohibited_item.represented_as_official
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Fan-made items shown as official
+    explanation: >-
+      Fan-made and inspired items are allowed, but they can't be called official, licensed or
+      authorized merchandise unless they are.
+    targets: [listing, media, shop]
+    actions: [reject, remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Remove words like "official", "licensed" or "authentic" and any studio or brand logos from
+      the title, photos and description. Saying an item is inspired by a character is fine.
+    appealable: true
+
+  - id: prohibited_item.stolen_property
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Stolen property
+    explanation: >-
+      Items obtained through theft, fraud or other illegal means can't be sold on Barta.
+    targets: [listing, shop, account]
+    actions: [remove, suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.hazardous_materials
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Hazardous materials
+    explanation: >-
+      Toxic chemicals, radioactive materials and anything that is a health or safety risk when
+      shipped can't be listed.
+    targets: [listing, media]
+    actions: [reject, remove]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.recalled_products
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Recalled products
+    explanation: >-
+      Products under a government or manufacturer recall can't be sold.
+    targets: [listing]
+    actions: [reject, remove]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.tobacco_vaping
+    category: prohibited_items
+    tos_sections: ["7.1", "8.4"]
+    title: Tobacco and vaping products
+    explanation: >-
+      Cigarettes, e-cigarettes and vaping products can't be sold on Barta.
+    targets: [listing, media, backstage_post]
+    actions: [reject, remove]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.alcohol
+    category: prohibited_items
+    tos_sections: ["7.1", "8.4"]
+    title: Alcoholic beverages
+    explanation: >-
+      Alcoholic drinks can't be sold on Barta.
+    targets: [listing, media, backstage_post, event]
+    actions: [reject, remove]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.human_remains
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Human remains and body parts
+    explanation: >-
+      Human remains, tissue, organs and bodily fluids can't be listed.
+    targets: [listing, media]
+    actions: [reject, remove, suspend]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.live_animals
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Live animals
+    explanation: >-
+      Live animals can't be sold on Barta.
+    targets: [listing]
+    actions: [reject, remove]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.promotes_hate_or_violence
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Items that promote hatred or violence
+    explanation: >-
+      Items that promote, glorify or incite violence, terrorism, or hatred against people based
+      on race, ethnicity, religion, gender, sexual orientation, disability or national origin
+      can't be sold.
+    targets: [listing, media, shop]
+    actions: [reject, remove, suspend]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.personal_information
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Items containing personal information
+    explanation: >-
+      Items that contain other people's personal, financial or confidential information, such
+      as data lists or documents, can't be sold.
+    targets: [listing, media]
+    actions: [reject, remove, suspend]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: prohibited_item.requires_license
+    category: prohibited_items
+    tos_sections: ["7.1"]
+    title: Items that need a special license
+    explanation: >-
+      Items that need a government license to sell, such as medical devices or prescription
+      items, can only be sold by sellers who hold that license.
+    targets: [listing]
+    actions: [reject, remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      If you hold the license, request a review and tell us the license type and number. If you
+      don't, the item can't be listed.
+    appealable: true
+
+  # ---------------------------------------------------------------- listing accuracy
+  - id: listing.misleading_description
+    category: listing_accuracy
+    tos_sections: ["4.2", "7.2"]
+    title: Misleading description
+    explanation: >-
+      A listing's title and description have to be accurate and match the item a buyer will
+      receive.
+    targets: [listing]
+    actions: [warn, reject, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Edit the title and description so they describe exactly what you are selling, including
+      size, materials and anything that is not included, then request a review.
+    appealable: true
+
+  - id: listing.photos_not_the_item
+    category: listing_accuracy
+    tos_sections: ["4.2"]
+    title: Photos don't show the actual item
+    explanation: >-
+      Listing photos have to show the item being sold. Stock images, mockups or photos of a
+      different item can mislead buyers.
+    targets: [listing, media]
+    actions: [warn, reject, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Replace the photos with your own pictures of the item you will ship. For made-to-order
+      work, show a finished example and say in the description that it is an example.
+    appealable: true
+
+  - id: listing.inaccurate_price
+    category: listing_accuracy
+    tos_sections: ["4.2"]
+    title: Price doesn't match the item
+    explanation: >-
+      The listed price has to be the real price for the item shown. Placeholder prices, or a
+      price that only covers part of what the photos and title suggest, mislead buyers.
+    targets: [listing]
+    actions: [warn, reject]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Set the price to what a buyer actually pays for the item shown, or split the listing into
+      separate items or variants with their own prices.
+    appealable: true
+
+  - id: listing.inaccurate_condition
+    category: listing_accuracy
+    tos_sections: ["4.2"]
+    title: Condition isn't accurate
+    explanation: >-
+      The condition you choose has to match the item. Wear, damage or missing parts must be
+      shown or described.
+    targets: [listing]
+    actions: [warn, reject]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Update the condition and describe any wear, flaws or missing pieces. Add a photo of
+      anything a buyer would want to see before buying.
+    appealable: true
+
+  - id: listing.wrong_category
+    category: listing_accuracy
+    tos_sections: ["4.2"]
+    title: Listed in the wrong category
+    explanation: >-
+      Listings have to be accurate, and that includes where they are filed. An item in the wrong
+      category is hard to find and shows up for buyers looking for something else.
+    targets: [listing]
+    actions: [warn, reject]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Edit the listing and pick the category that best matches the item, then request a review.
+    appealable: true
+
+  - id: listing.search_manipulation
+    category: listing_accuracy
+    tos_sections: ["7.2"]
+    title: Search manipulation
+    explanation: >-
+      Stuffing titles or tags with unrelated keywords, brand names or other shops' names to show
+      up in more searches is not allowed.
+    targets: [listing, shop]
+    actions: [warn, reject, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Keep the title and tags to words that describe the item itself. Remove unrelated terms,
+      brand names you aren't selling, and repeated keywords.
+    appealable: true
+
+  - id: listing.price_manipulation
+    category: listing_accuracy
+    tos_sections: ["7.2"]
+    title: Price manipulation
+    explanation: >-
+      Fake discounts, inflated "was" prices, and coordinated pricing meant to mislead buyers are
+      not allowed.
+    targets: [listing, shop]
+    actions: [warn, remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Show only real prices and real sale prices. Remove any reference price you never charged.
+    appealable: true
+
+  # ---------------------------------------------------------------- seller obligations
+  - id: seller.order_fulfillment
+    category: seller_obligations
+    tos_sections: ["4.2", "13.2"]
+    title: Orders not fulfilled as described
+    explanation: >-
+      Sellers have to ship or hand off orders promptly and the way the listing describes.
+      Repeated late, missing or incomplete orders put buyers at risk.
+    targets: [shop, account]
+    actions: [warn, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Ship or refund every open order, add tracking where you can, and set handling times you can
+      keep. Then request a review and tell us what changed.
+    appealable: true
+
+  - id: seller.return_policy
+    category: seller_obligations
+    tos_sections: ["4.3"]
+    title: Return policy missing or unlawful
+    explanation: >-
+      Each shop has to state its return and refund policy clearly, and the policy has to follow
+      consumer protection law where you and your buyers are.
+    targets: [shop, listing]
+    actions: [warn, suspend]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Add a clear return and refund policy to your shop settings or listing description, then
+      request a review.
+    appealable: true
+
+  - id: seller.legal_compliance
+    category: seller_obligations
+    tos_sections: ["4.2"]
+    title: Selling against product safety or export law
+    explanation: >-
+      Sellers have to follow the laws that apply to what they sell, including product safety,
+      labeling and export rules.
+    targets: [listing, shop]
+    actions: [reject, remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Add any required safety warnings or labels, stop shipping to places the item can't legally
+      go, then request a review.
+    appealable: true
+
+  - id: event.organizer_penalties
+    category: seller_obligations
+    tos_sections: ["4.8"]
+    title: Organizer terms that fine vendors
+    explanation: >-
+      Organizer terms can set refund windows and rules, but they can't charge vendors fines,
+      penalties or late fees.
+    targets: [event]
+    actions: [warn, hide, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Edit your event terms to remove any fines, penalties or late fees, then request a review.
+    appealable: true
+
+  - id: event.not_as_described
+    category: seller_obligations
+    tos_sections: ["4.8", "13.2"]
+    title: Event not run as described
+    explanation: >-
+      Organizers are responsible for running the event the way the listing describes it,
+      including the date, place and what tickets and booths include.
+    targets: [event, shop]
+    actions: [warn, hide, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Update the event page so it matches what is happening, tell ticket holders and vendors
+      what changed, and offer refunds where the change affects them.
+    appealable: true
+
+  - id: membership.not_delivered
+    category: seller_obligations
+    tos_sections: ["4.6"]
+    title: Membership benefits not delivered
+    explanation: >-
+      A creator who offers a membership has to deliver what the offer describes, and keep member
+      content available through the period members already paid for.
+    targets: [shop, backstage_post]
+    actions: [warn, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Restore the member content or benefits, or update the offer so it matches what you deliver
+      and refund members who paid for something they did not get.
+    appealable: true
+
+  # ---------------------------------------------------------------- content
+  - id: content.nudity
+    category: content
+    tos_sections: ["8.4"]
+    title: Nudity
+    explanation: >-
+      Nudity isn't allowed anywhere on Barta, including listings, creator pages, Backstage and
+      member-only posts. Costume, cosplay, body paint and prop photography is welcome when no
+      nudity is shown.
+    targets: [listing, media, shop, backstage_post, comment, message, event, review]
+    actions: [hide, reject, remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Replace the photo or post with one that shows no nudity, then request a review if you
+      think the call was wrong.
+    appealable: true
+
+  - id: content.sexually_explicit
+    category: content
+    tos_sections: ["8.4"]
+    title: Sexually explicit content
+    explanation: >-
+      Sexually explicit images, video and writing aren't allowed anywhere on Barta, public or
+      member-only.
+    targets: [listing, media, shop, backstage_post, comment, message, event, review]
+    actions: [hide, reject, remove, suspend]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      Take down the explicit content and replace it with something that follows the content
+      rules, then request a review.
+    appealable: true
+
+  - id: content.sexual_services
+    category: content
+    tos_sections: ["8.4"]
+    title: Offering sexual services
+    explanation: >-
+      Listings, posts or messages that offer sexual services aren't allowed.
+    targets: [listing, media, shop, backstage_post, message, account]
+    actions: [remove, suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: content.suggestive_paid_content
+    category: content
+    tos_sections: ["8.4", "4.6", "4.7"]
+    title: Paid "lewd" or "spicy" sets
+    explanation: >-
+      Memberships and tips can't be used to sell sexually suggestive content, including
+      so-called "lewd" or "spicy" photo sets, even when the photos show no nudity.
+    targets: [shop, backstage_post, media, listing]
+    actions: [remove, suspend]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      Remove the suggestive posts and any offer or tier that promises them, and make sure your
+      membership describes the creative work members get. Then request a review.
+    appealable: true
+
+  - id: content.csam
+    category: content
+    tos_sections: ["8.4", "7.3"]
+    title: Child sexual abuse material
+    explanation: >-
+      Barta has zero tolerance for child sexual abuse material. It is removed, the account is
+      closed, and it is reported to the National Center for Missing & Exploited Children as the
+      law requires.
+    targets: [listing, media, shop, backstage_post, comment, message, account]
+    actions: [remove, ban]
+    severity: critical
+    fixable: false
+    appealable: false
+    disclosure: withheld
+
+  - id: content.violent_extremism
+    category: content
+    tos_sections: ["8.4"]
+    title: Violent extremism
+    explanation: >-
+      Content that promotes, glorifies or incites violence or terrorism isn't allowed.
+    targets: [listing, media, shop, backstage_post, comment, message, event, review]
+    actions: [remove, suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: content.hate
+    category: content
+    tos_sections: ["8.4", "10"]
+    title: Hate
+    explanation: >-
+      Content or messages that promote hatred against people based on race, ethnicity, religion,
+      disability, gender, sexual orientation, national origin or any other protected
+      characteristic aren't allowed.
+    targets: [listing, media, shop, backstage_post, comment, message, event, review]
+    actions: [remove, suspend, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: content.private_information
+    category: content
+    tos_sections: ["8.4"]
+    title: Sharing someone's private information
+    explanation: >-
+      Posting another person's personal, financial or confidential information, such as their
+      home address, phone number or documents, isn't allowed.
+    targets: [listing, media, backstage_post, comment, message, review]
+    actions: [remove, suspend]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      Remove the other person's information. If it was shared by mistake, request a review and
+      tell us.
+    appealable: true
+
+  - id: content.prohibited_item_promotion
+    category: content
+    tos_sections: ["8.4", "7.1"]
+    title: Promoting prohibited items
+    explanation: >-
+      Posts, comments and messages can't promote or offer items that can't be sold on Barta,
+      even if the sale would happen somewhere else.
+    targets: [backstage_post, comment, message, shop, event, media]
+    actions: [remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Remove the post or the part of it that promotes the item, then request a review.
+    appealable: true
+
+  - id: content.defamation
+    category: content
+    tos_sections: ["8.2"]
+    title: Defamatory content
+    explanation: >-
+      Content that makes false statements damaging to another person's or business's reputation
+      isn't allowed.
+    targets: [listing, backstage_post, comment, message, review, shop]
+    actions: [remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Remove the statements about the other person or business. Honest reviews of your own
+      experience are fine.
+    appealable: true
+
+  - id: content.objectionable
+    category: content
+    tos_sections: ["8.2", "8.3"]
+    title: Graphic or harmful content
+    explanation: >-
+      Content that is obscene, abusive, graphic or otherwise harmful can be removed, even if it
+      isn't covered by a more specific rule.
+    targets: [listing, media, shop, backstage_post, comment, message, event, review]
+    actions: [hide, reject, remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Replace the content with something less graphic, then request a review if you think the
+      call was wrong.
+    appealable: true
+
+  - id: content.charging_for_prohibited_content
+    category: content
+    tos_sections: ["8.4", "4.7"]
+    title: Charging for prohibited content
+    explanation: >-
+      You can't charge for, or accept tips or membership payments for, content that breaks the
+      content rules.
+    targets: [shop, backstage_post, listing, account]
+    actions: [remove, suspend]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      Remove the content and any offer, tier or tip request tied to it, then request a review.
+    appealable: true
+
+  # ---------------------------------------------------------------- intellectual property
+  - id: ip.infringement
+    category: intellectual_property
+    tos_sections: ["8.4", "8.2"]
+    title: Content you don't have the rights to
+    explanation: >-
+      You can only post and sell content you own or have permission to use. Fan-made work you
+      created is fine. Copying someone else's designs, illustrations, writing or patterns isn't.
+    targets: [listing, media, shop, backstage_post, event]
+    actions: [reject, remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Replace the copied material with your own work, or get permission from the rights holder.
+      If you already have permission, request a review and say so.
+    appealable: true
+
+  - id: ip.pirated_or_leaked
+    category: intellectual_property
+    tos_sections: ["8.4"]
+    title: Pirated or leaked work
+    explanation: >-
+      Pirated, leaked or copied files, patterns, courses and other digital goods can't be shared
+      or sold.
+    targets: [listing, media, backstage_post, message]
+    actions: [remove, suspend]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: ip.stolen_photos
+    category: intellectual_property
+    tos_sections: ["8.2", "4.2"]
+    title: Photos taken from someone else
+    explanation: >-
+      Listing and shop photos have to be yours or used with permission. Photos copied from
+      another seller, shop or website aren't allowed.
+    targets: [listing, media, shop]
+    actions: [reject, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Replace the photos with pictures you took yourself, then request a review.
+    appealable: true
+
+  - id: ip.copyright_notice
+    category: intellectual_property
+    tos_sections: ["9.2", "9.3"]
+    title: Removed after a copyright notice
+    explanation: >-
+      A rights holder sent Barta a copyright (DMCA) notice about this content, and we removed it
+      as the law requires.
+    targets: [listing, media, shop, backstage_post, event]
+    actions: [remove]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      If you believe it was removed by mistake, you can send a counter-notification to
+      legal@barta.shop with the information the DMCA requires. You can also request a review
+      here and we will tell you what to include.
+    appealable: true
+
+  - id: ip.repeat_infringer
+    category: intellectual_property
+    tos_sections: ["7.3"]
+    title: Repeated intellectual property violations
+    explanation: >-
+      Accounts that repeatedly infringe other people's intellectual property are closed.
+    targets: [account, shop]
+    actions: [suspend, close, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  # ---------------------------------------------------------------- conduct
+  - id: conduct.harassment
+    category: conduct
+    tos_sections: ["7.2", "8.4", "10"]
+    title: Harassment
+    explanation: >-
+      Harassing, abusing or bullying other people in messages, comments, reviews or posts isn't
+      allowed.
+    targets: [message, comment, review, backstage_post, account]
+    actions: [warn, remove, suspend, ban]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: conduct.threats
+    category: conduct
+    tos_sections: ["7.2", "8.4", "10"]
+    title: Threats and intimidation
+    explanation: >-
+      Threatening or intimidating anyone on Barta, or anywhere about a Barta transaction, isn't
+      allowed.
+    targets: [message, comment, review, backstage_post, account]
+    actions: [remove, suspend, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: conduct.impersonation
+    category: conduct
+    tos_sections: ["7.2"]
+    title: Impersonation or false identity
+    explanation: >-
+      You can't pretend to be another person, creator, shop or business, or set up an account
+      under a false identity.
+    targets: [account, shop, message]
+    actions: [suspend, ban]
+    severity: high
+    fixable: true
+    fix_guidance: >-
+      If this is a mix-up, for example a shop name that is too close to another, change the name
+      and photos and request a review. We may ask you to confirm who you are.
+    appealable: true
+
+  - id: messaging.spam
+    category: conduct
+    tos_sections: ["7.2", "10"]
+    title: Spam and unsolicited advertising
+    explanation: >-
+      Messages are for real questions and conversations about listings, shops and orders. Bulk
+      messages, unsolicited ads and repeated promotion aren't allowed.
+    targets: [message, comment, account]
+    actions: [warn, remove, suspend]
+    severity: low
+    fixable: false
+    appealable: true
+
+  - id: messaging.phishing
+    category: conduct
+    tos_sections: ["7.2", "10"]
+    title: Phishing
+    explanation: >-
+      Messages or links that try to collect someone's password, payment details or personal
+      information aren't allowed.
+    targets: [message, comment, account]
+    actions: [remove, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: fraud.scam
+    category: conduct
+    tos_sections: ["7.2", "13.2"]
+    title: Scams and fraud
+    explanation: >-
+      Deceiving buyers, sellers or Barta to take money or goods, such as selling items you don't
+      have or fake payment requests, isn't allowed.
+    targets: [listing, shop, message, account, event]
+    actions: [remove, suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: buyer.chargeback_first
+    category: conduct
+    tos_sections: ["5.2"]
+    title: Chargeback without trying to resolve it
+    explanation: >-
+      Buyers agree to try to resolve an order problem with the seller, and through Barta if
+      needed, before filing a chargeback with their bank.
+    targets: [account]
+    actions: [warn, suspend]
+    severity: low
+    fixable: false
+    appealable: true
+
+  # ---------------------------------------------------------------- fees and payments
+  - id: fees.off_platform_payment
+    category: fees_and_payments
+    tos_sections: ["7.2", "10"]
+    title: Taking payment off Barta
+    explanation: >-
+      Steering buyers to pay you outside Barta, such as through a payment app, bank transfer or
+      another site, for something they found here isn't allowed. It also removes the buyer's
+      protection.
+    targets: [message, listing, shop, backstage_post, account]
+    actions: [warn, remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Remove payment handles, outside links and requests to pay elsewhere from your listings,
+      shop and messages, and take orders through Barta checkout.
+    appealable: true
+
+  - id: fees.contact_details_to_avoid_fees
+    category: fees_and_payments
+    tos_sections: ["10"]
+    title: Sharing contact details to go around Barta
+    explanation: >-
+      Sharing phone numbers, outside email addresses or social handles so a sale can happen
+      outside Barta isn't allowed.
+    targets: [message, listing, shop, backstage_post]
+    actions: [warn, remove]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Remove the contact details and keep the conversation and the sale on Barta.
+    appealable: true
+
+  - id: fees.fee_evasion
+    category: fees_and_payments
+    tos_sections: ["7.2"]
+    title: Getting around Barta fees
+    explanation: >-
+      Setting up listings or orders to avoid fees, such as moving the price into shipping or
+      marking online sales as in-person, isn't allowed.
+    targets: [listing, shop, account]
+    actions: [warn, remove, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Put the full item price in the price field and record each sale the way it happened.
+    appealable: true
+
+  - id: fraud.money_laundering
+    category: fees_and_payments
+    tos_sections: ["7.2", "13.2"]
+    title: Money laundering and financial crime
+    explanation: >-
+      Using Barta to move money for laundering, terrorist financing or other financial crimes is
+      prohibited, and we may hold payouts while we investigate.
+    targets: [account, shop]
+    actions: [suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  # ---------------------------------------------------------------- platform integrity
+  - id: integrity.review_manipulation
+    category: platform_integrity
+    tos_sections: ["7.2"]
+    title: Fake or manipulated reviews
+    explanation: >-
+      Reviews have to come from real buyers. Writing your own reviews, trading reviews, paying
+      for them, or pressuring buyers to change them isn't allowed.
+    targets: [review, shop, account]
+    actions: [remove, suspend]
+    severity: medium
+    fixable: false
+    appealable: true
+
+  - id: integrity.automation
+    category: platform_integrity
+    tos_sections: ["7.2"]
+    title: Bots and scraping
+    explanation: >-
+      Using bots, scrapers or other automated tools to access or collect data from Barta needs
+      our written consent.
+    targets: [account]
+    actions: [warn, suspend]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      Stop the automated access. If you need data or an integration, contact support@barta.shop.
+    appealable: true
+
+  - id: integrity.unauthorized_access
+    category: platform_integrity
+    tos_sections: ["7.2"]
+    title: Unauthorized access
+    explanation: >-
+      Trying to get into other people's accounts or Barta's systems isn't allowed.
+    targets: [account]
+    actions: [suspend, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: integrity.malware
+    category: platform_integrity
+    tos_sections: ["7.2"]
+    title: Malware and malicious files
+    explanation: >-
+      Uploading or sending viruses, malware or other malicious code isn't allowed.
+    targets: [media, message, listing, account]
+    actions: [remove, ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: integrity.service_disruption
+    category: platform_integrity
+    tos_sections: ["7.2"]
+    title: Disrupting the service
+    explanation: >-
+      Interfering with how Barta works, or with other people's use of it, isn't allowed.
+    targets: [account]
+    actions: [suspend, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: conduct.unlawful_use
+    category: platform_integrity
+    tos_sections: ["7.2", "13.2"]
+    title: Illegal activity
+    explanation: >-
+      Barta can't be used for anything that breaks the law.
+    targets: [listing, media, shop, backstage_post, message, event, account]
+    actions: [remove, suspend, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  # ---------------------------------------------------------------- accounts
+  - id: account.underage
+    category: accounts
+    tos_sections: ["1"]
+    title: Under the minimum age
+    explanation: >-
+      You have to be at least 16 to use Barta, and anyone under 18 needs a parent or guardian's
+      consent.
+    targets: [account]
+    actions: [suspend, close]
+    severity: medium
+    fixable: true
+    fix_guidance: >-
+      If you meet the age requirement, request a review. We may ask you to confirm your age or
+      your guardian's consent.
+    appealable: true
+
+  - id: account.inaccurate_information
+    category: accounts
+    tos_sections: ["2.1"]
+    title: Inaccurate account details
+    explanation: >-
+      Your account and shop details have to be accurate and up to date.
+    targets: [account, shop]
+    actions: [warn, suspend]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Update your name, contact and shop details in settings, then request a review.
+    appealable: true
+
+  - id: account.security_lock
+    category: accounts
+    tos_sections: ["2.2", "13.2"]
+    title: Locked to protect the account
+    explanation: >-
+      We saw activity that suggests someone else may have access to this account, so we paused
+      it to protect you and the people you trade with.
+    targets: [account, shop]
+    actions: [suspend]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Reset your password, check your email account is secure, then request a review so we can
+      turn things back on.
+    appealable: true
+
+  - id: account.multiple_accounts
+    category: accounts
+    tos_sections: ["2.3"]
+    title: Multiple accounts used to deceive
+    explanation: >-
+      Each person may have one personal account. Extra accounts used to manipulate the
+      marketplace or deceive other people are closed, along with the accounts linked to them.
+    targets: [account, shop]
+    actions: [suspend, close, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: account.ban_evasion
+    category: accounts
+    tos_sections: ["2.3", "7.3"]
+    title: Getting around an enforcement action
+    explanation: >-
+      Creating a new account or shop to get around a suspension or ban isn't allowed, and every
+      account involved is closed.
+    targets: [account, shop]
+    actions: [ban]
+    severity: critical
+    fixable: false
+    appealable: true
+
+  - id: account.repeat_violations
+    category: accounts
+    tos_sections: ["7.3"]
+    title: Repeated violations
+    explanation: >-
+      We keep records of enforcement. After repeated violations of the Terms, a shop or account
+      can be suspended, including its creator memberships, and continued violations lead to
+      permanent closure.
+    targets: [account, shop]
+    actions: [suspend, close, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: account.risk_of_harm
+    category: accounts
+    tos_sections: ["13.2"]
+    title: Risk of harm to others
+    explanation: >-
+      We may pause or close an account whose activity puts other people, Barta or third parties
+      at risk, including while we investigate possible fraud. Held payouts may be delayed during
+      the review.
+    targets: [account, shop]
+    actions: [suspend, close, ban]
+    severity: high
+    fixable: false
+    appealable: true
+
+  - id: account.inactive
+    category: accounts
+    tos_sections: ["13.2"]
+    title: Inactive account
+    explanation: >-
+      Accounts that haven't been used for 12 months or more may be closed.
+    targets: [account, shop]
+    actions: [close]
+    severity: low
+    fixable: true
+    fix_guidance: >-
+      Sign in and request a review if you want to keep the account.
+    appealable: true
+
+  # ---------------------------------------------------------------- review in progress
+  - id: review.held_for_review
+    category: review
+    tos_sections: ["8.5"]
+    title: Waiting for a person to review it
+    explanation: >-
+      Some uploads and posts, including files on member-only posts, are checked by a person
+      before buyers can see them. Nothing is wrong yet. We hide it only until the review is done.
+    targets: [listing, media, backstage_post, comment, event]
+    actions: [hide]
+    severity: low
+    fixable: false
+    appealable: false

@@ -13,7 +13,7 @@ policies/              # Policy documents (markdown)
 ├── terms_of_service.md
 └── versions/          # Version history manifests
 
-catalogs/              # Fee schedule
+catalogs/              # Fee schedules and the moderation rules every enforcement action cites
 ledger/roots/          # Daily cryptographic snapshots
 ```
 

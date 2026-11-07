@@ -31,7 +31,11 @@ ATTESTATION_CACHE = Path("attestations/latest.json")
 FEE_CACHE = Path("catalogs/fees.yaml")
 CATALOG_ARCHIVE = Path("catalogs/archive")
 R2_PUBLIC_URL = "https://ledger.barta.shop"
-OPTIONAL_CATALOGS = {"in_person_fees": "in_person_fee", "ticket_fees": "ticket_fee"}
+OPTIONAL_CATALOGS = {
+    "in_person_fees": "in_person_fee",
+    "ticket_fees": "ticket_fee",
+    "moderation_rules": "moderation_rules",
+}
 
 
 def _load_public_keys() -> list[bytes]:
