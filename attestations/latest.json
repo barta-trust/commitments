@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "timestamp": "2026-10-29T05:07:08Z",
-  "commit_sha": "3bfc8209a1e595045a0b79cf76a99e174a1dc2f5",
+  "timestamp": "2026-11-06T18:46:09Z",
+  "commit_sha": "7898094f545c1045144bbe3fb6185c80986bb1aa",
   "catalogs": {
     "fees": "61a5defa1b14290c1d1ca21c06b63bf2475e7c1b675651834fb9cb7388ffbdd9",
     "in_person_fees": "5e96b146a3018bdc9192a1498cead3290fbb8a6d444a95a35fee5e37ac2c9809",
     "ticket_fees": "3ac246e7e5551c58b5b4eb845cb11f5b769c85bf7c429dbd01feb0529933c937"
   },
-  "signature": "FPEbd+2dy4WoENN1bsKGhSxB7GlQ+WizKcohmGM1KLMGizHnwk8PSP4RfRm2GEzJ8xkzc6ZDfAKFFNuRvR0XBA=="
+  "signature": "wOXh6X2SKe+V6r4MSYjmkVmK6EC1XRuJ72YILLKz8DKCfC270losNWRKP39LPHkfsZ6LaXRvbjH/COAvEPihDA=="
 }
