@@ -1,13 +1,13 @@
 ---
-version: "1.4"
-effective: "2026-11-07"
+version: "1.5"
+effective: "2026-11-16"
 title: "Privacy Policy"
 ---
 
 # Privacy Policy
 
-**Effective Date:** November 7, 2026  
-**Last Updated:** November 7, 2026
+**Effective Date:** November 16, 2026  
+**Last Updated:** November 16, 2026
 
 Barta Inc. (**"Barta,"** **"we,"** **"us,"** or **"our"**) operates the Barta marketplace platform at barta.shop and its subdomains (collectively, the **"Service"**). This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use the Service as a buyer, seller, or visitor.
 
@@ -140,7 +140,7 @@ Where we rely on legitimate interest, we have assessed that our interests do not
 
 # 4. How We Share Your Information
 
-We do not sell your personal information.
+We do not sell your personal information, and we do not share it with third parties or affiliates for their marketing or promotional purposes.
 
 We share information only in the following circumstances:
 
@@ -201,17 +201,9 @@ We do not use third-party advertising or cross-site tracking cookies.
 
 # 7. Advertising Attribution and Campaign Measurement
 
-To understand whether our marketing campaigns are effective, Barta may collect limited conversion events such as:
+To see which of our own ads bring people to Barta, we note when someone who arrived from one of our ads signs up or makes a purchase, and we let the ad platform know that it happened. We do not send your name, email address, phone number, purchase details or any other personal information. This is used only to measure our own advertising. It is never used to target you, and your information is never shared with third parties for their marketing.
 
-- App installs
-- Account registrations
-- Purchases or completed transactions
-
-These events may be transmitted to advertising platforms through secure server-to-server integrations. This information is used solely to measure the effectiveness of our advertising campaigns and optimize how we reach potential creators and buyers.
-
-**Why we disclose this.** Most platforms transmit conversion data to advertising networks without mentioning it in their privacy policy, or bury it in vague language about "business partners." We believe you should know exactly what data leaves our systems and why.
-
-**What we do not share.** We do not provide advertising platforms with browsing histories, marketplace activity, or behavioral profiles. We do not sell personal data to advertisers. Only minimal conversion signals (e.g., "a purchase occurred") are transmitted, without details about what was purchased, from whom, or other marketplace context.
+**What we do not share.** We do not provide advertising platforms with browsing histories, marketplace activity, or behavioral profiles. We do not sell personal data to advertisers.
 
 **Our commitment.** Barta does not share your marketplace activity, purchase history, or selling data with external advertising platforms for the purpose of ad targeting. Your marketplace data stays within Barta.
 
