@@ -1,11 +1,14 @@
 {
   "version": 1,
-  "timestamp": "2026-11-06T18:46:09Z",
-  "commit_sha": "7898094f545c1045144bbe3fb6185c80986bb1aa",
+  "timestamp": "2026-11-17T17:00:01Z",
+  "commit_sha": "289cd6fe68dda99f0f9a81394cd69ded15db9a33",
   "catalogs": {
+    "booth_fees": "c55ac7f9c62a58785405430914aa8058f5635d79a885dcd48429763fe737d314",
+    "booth_fees_pro": "d16314e217e1b9ade7f7948edf7c0fc52498ee44d352237295ad8f4b063377cb",
     "fees": "61a5defa1b14290c1d1ca21c06b63bf2475e7c1b675651834fb9cb7388ffbdd9",
     "in_person_fees": "5e96b146a3018bdc9192a1498cead3290fbb8a6d444a95a35fee5e37ac2c9809",
+    "moderation_rules": "a826984e170f2b0049140177491680fb9e63a509cf13149e181f3771820a0e28",
     "ticket_fees": "3ac246e7e5551c58b5b4eb845cb11f5b769c85bf7c429dbd01feb0529933c937"
   },
-  "signature": "wOXh6X2SKe+V6r4MSYjmkVmK6EC1XRuJ72YILLKz8DKCfC270losNWRKP39LPHkfsZ6LaXRvbjH/COAvEPihDA=="
+  "signature": "ivKbHcRkfh9vSPD/DNi/xdZbM60Rn920UsMtCsZUhb1JAJ/FRIQCN6Ri2Sok5rrQfr7/vfLmD0sPZbPxK0asAA=="
 }
