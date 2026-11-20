@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "timestamp": "2026-11-19T01:38:12Z",
-  "commit_sha": "c0a60f635afa6e866e1b710ce831162b7ae05e72",
+  "timestamp": "2026-11-20T03:49:30Z",
+  "commit_sha": "0aa7f0cf786321c3b80756876327ffd2b3239ab8",
   "catalogs": {
     "booth_fees": "c55ac7f9c62a58785405430914aa8058f5635d79a885dcd48429763fe737d314",
     "booth_fees_pro": "d16314e217e1b9ade7f7948edf7c0fc52498ee44d352237295ad8f4b063377cb",
@@ -10,5 +10,5 @@
     "moderation_rules": "a826984e170f2b0049140177491680fb9e63a509cf13149e181f3771820a0e28",
     "ticket_fees": "3ac246e7e5551c58b5b4eb845cb11f5b769c85bf7c429dbd01feb0529933c937"
   },
-  "signature": "6/cifCgaDAjRlnfhOvOPyCPhRlrorv1gqS8a5yp4j4KjsfnIZdOVPpev7Z7YuVTficQAegp8Q/gm2YTtFMnNCA=="
+  "signature": "pSc5nJHiS1Fk147j7Lf5Rc8GO3CKWvBZ/YUh+uGrrbvgi2YI3uJcw0OikttaRZVgjM1WonazX9HUBhrwHmNtDA=="
 }
